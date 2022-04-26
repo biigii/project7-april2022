@@ -1,26 +1,30 @@
-figure {
-   width: 300px;
-   position: relative;
-   margin: 0 auto;
+h1 {
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
 }
 
-figure::after {
-  content: '';
-  display: block;
-  width: 300px;
-  height: 300px;
-  background-color: #f50505;
+h1::before {
+  /*  this could a small triangle pointing down to heading  */
+}
+
+h1::after {
+  /* content:'some text', */
+  content: attr(data-tooltip);
   position: absolute;
-  top: 0;
-  left: 0;
-  /* opacity: 0; */
-  /* transition: opacity 400ms; */
-  transform: scale(0) rotate(0deg);
-  transition: transform 400ms ease-out;
-  opacity: 0.5;
+  border-radius: 5px;
+  width: 200px;
+  padding: 10px;
+  bottom: 100%;
+  left: calc(50% - 100px);
+  font-size: 12px;
+  background-color: #000;
+  color: #fff;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: opacity 400ms;
 }
 
-figure:hover::after {
-  /* opacity: 0.5 */
-  transform: scale(1) rotate(360deg);
+h1:hover::after {
+  opacity: 1;
 }
