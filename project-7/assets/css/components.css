@@ -1,10 +1,9 @@
-.container-static,
-.container-relative,
-.container-absolute {
+.block {
     width: 500px;
+    height: 500px;
     border: 3px dashed #000;
-    padding: 20px;
-    margin: 5px;
+    padding: 50px;
+    margin: 0 auto;
 }
 
 .box {
@@ -12,49 +11,35 @@
     height: 100px;
     line-height: 100px;
     border: 1px solid #000;
-    background-color: #f99;
     margin: 5px;
     font-size: 80px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.box-static {
-    background-color: #2020d7;
-    position: static;
+.box {
+  /* width: 300px;
+  height: 300px; */
+  /* transform: scale(1); */
+  /* transform: rotate(0deg); */
+  background-color: #f99;
+  /* transition-property: background-color;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out; */
+  /* transition: background-color 400ms; */
+  transition: transform 400ms;
+  /* transform: translateY(200px); */
+  /* transform: translate(-50px,-50px); */
+
 }
 
-/* now i have access to these: top bottom left right z-index */
-.box-relative {
-    background-color: #6def0a;
-    position: relative;
-    left: 50px;
-    top: -15px;
-    z-index: 2;
-}
 
-/* .box-c {
-  position: relative;
-  top: 75px;
-  left: 25px;
-  z-index: 1
-} */
 
-.box-absolute {
-    background-color: #e7d50c;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-}
-
-.container-absolute {
-  position: relative;
-}
-
-.box-fixed {
-  width: 300px;
-  position: fixed;
-  top: 0;
-  right: 0;
+.box:hover {
+  /* transform: scale(1.02); */
+  /* width: 105px;
+  height: 105px; */
+  /* transform: rotate(360deg); */
+  transform: skew(180deg, 180deg);
+  /* background-color: #c23939; */
 }
